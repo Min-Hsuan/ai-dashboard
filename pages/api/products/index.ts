@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next"
 import { apiHandler } from "@/lib/apiHandler"
 import { supabase } from "@/lib/supabase" 
 
