@@ -14,13 +14,13 @@ export default function Home() {
   const [name, setName] = useState<string>('')
   const [price, setPrice] = useState<number>(0)
   useEffect(() => {
-    fetch("/api/getProducts")
+    fetch("/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
   async function addProductApiHandler(){
-    const result = await fetch("/api/addProducts",{
+    const result = await fetch("/api/products",{
       method: "POST",
       headers: {"Content-type": "application/json"},
       body: JSON.stringify({name,price})
